@@ -5,10 +5,10 @@ class apache2-index {
 	}
 
 file { “/var/www/html/index.html”:
-	content => template(“apache2-index/templates/index.html”),
+	content => template(“templates/index.html”),
 	}
 
-service { “apache2”:
-	ensure => “running”,
+service { apache2:
+	ensure => running,
 	}
 }
